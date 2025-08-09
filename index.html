@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yodh Dhillon — Web Designer & Technical Analyst</title>
+  <meta name="description"
+    content="Resume & portfolio of Yodh Dhillon — Web Designer with 2 years experience and Technical Analyst (Indian market & crypto) with 1+ year experience. Amritsar, Punjab, India." />
+  <meta name="keywords" content="Yodh Dhillon, Web Designer, Technical Analyst, Resume, Amritsar, India, Crypto" />
+  <meta name="author" content="Yodh Dhillon" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yodh Dhillon — Web Designer & Technical Analyst">
+  <meta property="og:description"
+    content="Resume & portfolio of Yodh Dhillon. Web Designer (2 yrs) & Technical Analyst (1+ yr). Amritsar, Punjab.">
+  <meta property="og:image" content="https://YodhDhillon.github.io/preview.jpg">
+  <meta property="og:url" content="https://YodhDhillon.github.io">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #2563eb;
+    }
+
+    /* blue-600 */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* typed effect */
+    .typing>span {
+      border-right: 2px solid;
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    /* simple progress grow */
+    .grow {
+      width: 0;
+      animation: growWidth 1.6s forwards;
+    }
+
+    @keyframes growWidth {
+      to {
+        width: var(--w);
+      }
+    }
+
+    /* glass card */
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(6px);
+    }
+
+    .dark .glass {
+      background: rgba(17, 24, 39, 0.6);
+    }
+
+    /* timeline dot */
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 9px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #e5e7eb;
+    }
+
+    .dark .timeline::before {
+      background: #374151;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+
+  <!-- top nav -->
+  <header
+    class="sticky top-0 z-50 bg-white/60 dark:bg-gray-800/60 glass backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="/profile.jpg" alt="logo" class="w-8 h-8 rounded-sm" />
+        <div>
+          <div class="text-lg font-bold">Yodh Dhillon</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400">Web Designer • Technical Analyst</div>
+        </div>
+      </a>
+
+      <!-- desktop nav -->
+      <nav class="hidden sm:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#skills" class="hover:underline">Skills</a>
+        <a href="#experience" class="hover:underline">Experience</a>
+        <a href="#education" class="hover:underline">Education</a>
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+        <a href="resume.pdf" download class="ml-2 px-3 py-1 bg-sky-600 text-white rounded text-sm">Download CV</a>
+        <button id="themeBtn" class="ml-3 px-2 py-1 border rounded">🌓</button>
+      </nav>
+
+      <!-- mobile hamburger -->
+      <div class="sm:hidden">
+        <button id="hamb" class="text-2xl">☰</button>
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="sm:hidden hidden px-4 pb-4">
+      <div class="flex flex-col gap-2">
+        <a href="#about" class="block py-2">About</a>
+        <a href="#skills" class="block py-2">Skills</a>
+        <a href="#experience" class="block py-2">Experience</a>
+        <a href="#education" class="block py-2">Education</a>
+        <a href="#projects" class="block py-2">Projects</a>
+        <a href="#contact" class="block py-2">Contact</a>
+        <a href="resume.pdf" download class="block py-2 bg-sky-600 text-white rounded text-center">Download CV</a>
+        <button id="themeBtnMobile" class="mt-2 px-3 py-1 border rounded">🌓 Toggle Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+      <!-- left: text -->
+      <div class="md:col-span-2">
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-3">Hi — I'm <span class="text-sky-600">Yodh Dhillon</span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-4">
+          Web Designer · Technical Analyst (Indian market & Crypto)
+        </p>
+
+        <p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed max-w-2xl">
+          I build clean, responsive websites and analyze markets to make data-backed trading decisions.
+          I have <strong>2 years</strong> of Web Design experience and <strong>1+ year</strong> experience as a
+          Technical Analyst.
+          Based in <strong>Amritsar, Punjab, India</strong>.
+        </p>
+
+        <div class="flex flex-wrap gap-3 items-center">
+          <a href="resume.pdf" download class="px-4 py-2 bg-sky-600 text-white rounded shadow-sm">Download Resume</a>
+          <a href="#contact" class="px-4 py-2 border rounded">Contact Me</a>
+          <a href="https://t.me/Yodh_Dhillon" target="_blank" class="px-3 py-2 border rounded">Telegram</a>
+        </div>
+
+        <div class="mt-6 text-sm text-gray-500">
+          <span class="hidden sm:inline">Location: </span> Amritsar, Punjab, India · 12th pass · Computer Operator
+          Diploma (ITI College)
+        </div>
+      </div>
+
+      <!-- right: profile card -->
+      <aside class="flex justify-center md:justify-end">
+        <div
+          class="w-56 glass rounded-xl p-4 flex flex-col items-center text-center border border-gray-200 dark:border-gray-700">
+          <!-- replace profile.jpg with your image -->
+          <img id="profilePic" src="profile.jpg" alt="Yodh Dhillon"
+            class="w-32 h-32 rounded-full object-cover border-2 border-white dark:border-gray-800 shadow-md mb-3" />
+          <div class="font-semibold">Yodh Dhillon</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400">Web Designer & Technical Analyst</div>
+          <div class="mt-3 text-xs text-gray-600 dark:text-gray-300">Amritsar, Punjab</div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="mt-16">
+      <h2 class="text-2xl font-bold mb-4">About Me</h2>
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">
+        I’m <strong>Yodh Dhillon</strong>, a Web Designer with 2 years of hands-on experience creating modern,
+        responsive websites using HTML, CSS, Tailwind and JavaScript.
+        I’m also a Technical Analyst with 1+ year experience analyzing the Indian stock market and cryptocurrencies. I
+        combine clean UI design with practical market analysis to build tools and pages that perform and convert.
+      </p>
+    </section>
+
+    <!-- skills -->
+    <section id="skills" class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">Skills</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="p-4 glass rounded-lg">
+          <h3 class="font-semibold mb-2">Web</h3>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>HTML & CSS</span><span>90%</span></div>
+              <div class="w-full bg-gray-200 dark:bg-gray-700 rounded h-3 overflow-hidden">
+                <div class="bg-sky-600 h-3 rounded grow" style="--w:90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Tailwind CSS</span><span>85%</span></div>
+              <div class="w-full bg-gray-200 dark:bg-gray-700 rounded h-3 overflow-hidden">
+                <div class="bg-sky-500 h-3 rounded grow" style="--w:85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>JavaScript</span><span>75%</span></div>
+              <div class="w-full bg-gray-200 dark:bg-gray-700 rounded h-3 overflow-hidden">
+                <div class="bg-yellow-500 h-3 rounded grow" style="--w:75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 glass rounded-lg">
+          <h3 class="font-semibold mb-2">Trading / Analysis</h3>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Technical Analysis</span><span>80%</span></div>
+              <div class="w-full bg-gray-200 dark:bg-gray-700 rounded h-3 overflow-hidden">
+                <div class="bg-green-500 h-3 rounded grow" style="--w:80%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>TradingView / Indicators</span><span>75%</span></div>
+              <div class="w-full bg-gray-200 dark:bg-gray-700 rounded h-3 overflow-hidden">
+                <div class="bg-emerald-500 h-3 rounded grow" style="--w:75%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Risk Management</span><span>70%</span></div>
+              <div class="w-full bg-gray-200 dark:bg-gray-700 rounded h-3 overflow-hidden">
+                <div class="bg-rose-500 h-3 rounded grow" style="--w:70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- experience timeline -->
+    <section id="experience" class="mt-12">
+      <h2 class="text-2xl font-bold mb-6">Experience</h2>
+
+      <div class="relative timeline pl-6">
+        <div class="mb-8 relative">
+          <div class="absolute left-0 top-1 w-4 h-4 bg-sky-600 rounded-full border-2 border-white dark:border-gray-900">
+          </div>
+          <div class="ml-6">
+            <div class="font-semibold">Web Designer — Freelance</div>
+            <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">2023 — Present</div>
+            <p class="text-gray-700 dark:text-gray-300">Designed responsive websites, landing pages and small web apps
+              using modern HTML, Tailwind, and JavaScript for local clients and personal projects.</p>
+          </div>
+        </div>
+
+        <div class="mb-8 relative">
+          <div
+            class="absolute left-0 top-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white dark:border-gray-900">
+          </div>
+          <div class="ml-6">
+            <div class="font-semibold">Technical Analyst — Indian Markets & Crypto</div>
+            <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">2022 — Present</div>
+            <p class="text-gray-700 dark:text-gray-300">Provide technical market analysis, charts, and trade ideas,
+              focusing on Indian equities and cryptocurrencies with practical risk management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- education -->
+    <section id="education" class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">Education</h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="glass p-4 rounded-lg">
+          <div class="font-semibold">Computer Operator Diploma</div>
+          <div class="text-sm text-gray-500 dark:text-gray-400">ITI College</div>
+        </div>
+        <div class="glass p-4 rounded-lg">
+          <div class="font-semibold">Higher Secondary (12th pass)</div>
+          <div class="text-sm text-gray-500 dark:text-gray-400">G.S.P.SENIOR Secondary School</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- projects -->
+    <section id="projects" class="mt-12">
+      <h2 class="text-2xl font-bold mb-4">Projects & Work</h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="p-4 glass rounded-lg border">
+          <div class="font-semibold">Resume Website</div>
+          <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">Personal portfolio built and hosted on GitHub
+            Pages.</div>
+          <a href="https://netwatch-01.github.io/YodhDhillon.github.io/" class="text-sky-600">View live</a>
+        </div>
+        <!-- add more project cards -->
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact" class="mt-12 mb-20">
+      <h2 class="text-2xl font-bold mb-4">Contact</h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="glass p-6 rounded-lg">
+          <h3 class="font-semibold mb-2">Get in touch</h3>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">I’m available for freelance web design and analysis projects.
+            Reach out with details and I’ll reply ASAP.</p>
+          <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+            <li><strong>Email:</strong> your-email@example.com</li>
+            <li><strong>Location:</strong> Amritsar, Punjab, India</li>
+            <li><strong>Telegram:</strong> <a href="https://t.me/Yodh_Dhillon"
+                class="text-sky-600">t.me/Yodh_Dhillon</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/YodhDhillon"
+                class="text-sky-600">github.com/YodhDhillon</a></li>
+          </ul>
+        </div>
+
+        <form action="https://formspree.io/f/mrbllzov" method="POST" class="p-6 glass rounded-lg space-y-4">
+          <input name="name" required placeholder="Your name"
+            class="w-full p-3 rounded border bg-white dark:bg-gray-800" />
+          <input name="email" type="email" required placeholder="Email"
+            class="w-full p-3 rounded border bg-white dark:bg-gray-800" />
+          <textarea name="message" rows="5" required placeholder="Message"
+            class="w-full p-3 rounded border bg-white dark:bg-gray-800"></textarea>
+          <button type="submit" class="w-full px-4 py-2 bg-sky-600 text-white rounded">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-6 bg-white/60 dark:bg-gray-800/60 border-t border-gray-200 dark:border-gray-700">
+    <div class="max-w-5xl mx-auto px-4 text-center text-sm text-gray-600 dark:text-gray-400">
+      © <span id="year"></span> Yodh Dhillon — Built with ❤️ • <a href="#top" class="underline">Back to top</a>
+    </div>
+  </footer>
+
+  <script>
+    // fill current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // hamburger toggle
+    const hamb = document.getElementById('hamb');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamb?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // theme toggle
+    const themeBtn = document.getElementById('themeBtn');
+    const themeBtnMobile = document.getElementById('themeBtnMobile');
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+      // store preference
+      if (document.documentElement.classList.contains('dark')) localStorage.theme = 'dark';
+      else localStorage.removeItem('theme');
+    }
+    themeBtn?.addEventListener('click', toggleTheme);
+    themeBtnMobile?.addEventListener('click', toggleTheme);
+
+    // load theme
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+
+    // simple typing subtitle (example)
+    // (Optional: replace with a more advanced library)
+    const typedTexts = ['Web Designer', 'Technical Analyst', 'Trader — Indian Market & Crypto'];
+    let ti = 0, ch = 0, forward = true;
+    const span = document.createElement('span');
+    document.querySelector('h1')?.appendChild(document.createTextNode(' '));
+    document.querySelector('h1')?.appendChild(span);
+    span.className = 'typing ml-2 text-sky-600 font-semibold';
+
+    function typeTick() {
+      const full = typedTexts[ti];
+      if (forward) {
+        ch++;
+        span.textContent = full.slice(0, ch);
+        if (ch === full.length) { forward = false; setTimeout(typeTick, 1000); return; }
+      } else {
+        ch--;
+        span.textContent = full.slice(0, ch);
+        if (ch === 0) { forward = true; ti = (ti + 1) % typedTexts.length; }
+      }
+      setTimeout(typeTick, forward ? 80 : 30);
+    }
+    typeTick();
+  </script>
+</body>
+
+</html>
